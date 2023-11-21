@@ -20,11 +20,23 @@
 	
 	<script>
 	
-		function sprawdz()
-		{
-			
-			
-		}
+	        function sprawdz() {
+	            var name = document.getElementById("imie").value;
+	            var age = document.getElementById("wiek").value;
+	            var txt = "";
+	
+	            if (age >= 18 && (name == "Brad" || name == "Morgan")) {
+	                txt += "wchodzisz za darmo";
+	            } else if (age < 16) {
+	                txt += "Nie możesz wziąć udziału w seansie";
+	            } else if (age >= 18) {
+	                txt += "Może wziąć udział. Cena biletu to 18 zł";
+	            } else {
+	                txt += "Może wziąć udział, jeśli jest z opiekunem. Cena biletu to 12 zł";
+	            }
+	
+	            document.getElementById("wynik").innerHTML = txt;
+	        }
 
 	</script>
 
