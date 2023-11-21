@@ -21,14 +21,41 @@
 	
 	<script>
 	
-		function matematyka()
-		{
-			var a = document.getElementById('a').value;
-			var b = document.getElementById('b').value;
-			var c = document.getElementById('c').value;
-			
-			
-		}
+	        function matematyka() {
+	            var a = document.getElementById('a').value;
+	            var b = document.getElementById('b').value;
+	            var c = document.getElementById('c').value;
+	            var txt = "";
+	            a = parseInt(a);
+	            b = parseInt(b);
+	            c = parseInt(c);
+	
+	            var min = Math.min(a, b, c);
+	            var max = Math.max(a, b, c);
+	            var aa = Math.abs(a);
+	            var bb = Math.abs(b);
+	            var cc = Math.abs(c);
+	
+	            txt += "<p>Najmniejszą z wprowadzonych liczb jest " + min + "</p><p>Największą z wprowadzonych liczb " + max + "</p><p>Wartość bezwzględną każdej podanej liczby: a = " + aa + " b = " + bb + " c = " + c + "</p><p>";
+	
+	            if (a % 2 == 0) {
+	                txt += " a jest parzyste ";
+	            } else {
+	                txt += " a nie jest parzyste ";
+	            }
+	            if (b % 2 == 0) {
+	                txt += " b jest parzyste ";
+	            } else {
+	                txt += " b nie jest parzyste ";
+	            }
+	            if (c % a == 0) {
+	                txt += " c jest parzyste ";
+	            } else {
+	                txt += " c nie jest parzyste ";
+	            }
+	
+	            document.getElementById("wynik").innerHTML = txt + "</p>";
+	        }
 
 	</script>
 
