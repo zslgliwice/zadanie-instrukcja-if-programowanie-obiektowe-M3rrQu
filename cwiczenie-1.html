@@ -21,11 +21,34 @@
 	
 	<script>
 	
-		function getDayName()
-		{
-					
-			
-		}
+	        function getDayName() {
+	            var x = document.getElementById("number").value;
+	            var txt = "";
+	
+	            if (x == 1) {
+	                txt += "Pierwszy dzień tygodnia to Monday - poniedziałek";
+	            } else if (x == 2) {
+	                txt += "Drugi dzień tygodnia to Tuesday - wtorek";
+	            } else if (x == 3) {
+	                txt += "Trzeci dzień tygodnia to Wednesday - środa";
+	            } else if (x == 4) {
+	                txt += "Czwarty dzień tygodnia to Thursday - czwartek";
+	            } else if (x == 5) {
+	                txt += "Piąty dzień tygodnia to Friday - piątek, piąteczek, piątunio";
+	                document.getElementById("wynik").style.color = "yellow";
+	            } else if (x == 6) {
+	                txt += "Szósty dzień tygodnia to Saturday - sobota";
+	                document.getElementById("wynik").style.color = "green";
+	            } else if (x == 7) {
+	                txt += "Pierwszy dzień tygodnia to Sunday - niedziela";
+	                document.getElementById("wynik").style.color = "green";
+	            } else {
+	                txt += "To nie jest prawidłowy numer dnia tygodnia!";
+	                document.getElementById("wynik").style.color = "red";
+	            }
+	
+	            document.getElementById("wynik").innerHTML = txt;
+	        }
 
 	</script>
 
