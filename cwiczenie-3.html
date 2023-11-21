@@ -19,11 +19,33 @@
 	
 	<script>
 	
-		function ktora_cwiartka()
-		{
-			
-			
-		}
+	        function ktora_cwiartka() {
+	            var x = document.getElementById("x").value;
+	            var y = document.getElementById("y").value;
+	            var txt = "";
+	
+	            if (x == 0 && y == 0) {
+	                txt += "Punkt P=(0,0) jest początkiem układu współrzędnych";
+	            } else if (x == 0 || y == 0) {
+	                txt += "punkt leży na jednej z osi";
+	            } else if (x == 15 && y == 96) {
+	                txt += "krótki zarys życiorysu Kartezjusza";
+	            } else if (x > 0) {
+	                if (y > 0) {
+	                    txt += "Ćwiartka nr 1";
+	                } else {
+	                    txt += "Ćwiartka nr 4";
+	                }
+	            } else {
+	                if (y > 0) {
+	                    txt += "Ćwiartka nr 2";
+	                } else {
+	                    txt += "Ćwiartka nr 3";
+	                }
+	            }
+	
+	            document.getElementById("wynik").innerHTML = txt;
+	        }
 
 	</script>
 
